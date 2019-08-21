@@ -3,6 +3,33 @@
 Hip Local
 {% endblock %}
 {% block content %}
+
+<head>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCmP9eykMXrewkNLEFc-q86bzDthlw8hvw",
+    authDomain: "tiktalkv2.firebaseapp.com",
+    databaseURL: "https://tiktalkv2.firebaseio.com",
+    projectId: "tiktalkv2",
+    storageBucket: "tiktalkv2.appspot.com",
+    messagingSenderId: "219285227272",
+    appId: "1:219285227272:web:04d97e913ffae7d8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.css">
+</head>
+
+
 <div class="mdl-grid portfolio-max-width">
 <span class="mdl-layout-title">{{model.greeting}}</span>
 </div>

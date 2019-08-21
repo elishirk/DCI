@@ -19,6 +19,7 @@ app = Flask(__name__)
 try:
   app.config.from_object(os.environ['APP_SETTINGS'])
   URL = app.config['API']
+  #URL = 'http://localhost:8085'
   BUCKET = app.config['BUCKET']
   PROJECT_NAME = app.config['PROJECT']
 except:
@@ -27,8 +28,8 @@ except:
   # Port is 5000 because only reason for running from command line locally
   # is because backend is being debugged in vscode, in which case it is on port 5000
   URL = 'http://localhost:5000'
-  PROJECT_NAME = 'roi-hiplocal'
-  BUCKET = 'roi-hiplocal'
+  PROJECT_NAME = 'tiktalkv2'
+  BUCKET = 'tiktalkbucket3'
 
 @app.route("/")
 def home():
