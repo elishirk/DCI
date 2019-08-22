@@ -40,12 +40,12 @@
     <script>
       // Initialize Firebase
       var config = {
-        apiKey: "AIzaSyBlEhlsAXuKXBzGWQJMVyku7H-E2v7dKqI",
-        authDomain: "roi-hiplocal.firebaseapp.com",
-        databaseURL: "https://roi-hiplocal.firebaseio.com",
-        projectId: "roi-hiplocal",
-        storageBucket: "roi-hiplocal.appspot.com",
-        messagingSenderId: "534013388225"
+        apiKey: "AIzaSyCmP9eykMXrewkNLEFc-q86bzDthlw8hvw",
+        authDomain: "tiktalkv2.firebaseapp.com",
+        databaseURL: "https://tiktalkv2.firebaseio.com",
+        projectId: "tiktalkv2",
+        storageBucket: "tiktalkv2.appspot.com",
+        messagingSenderId: "219285227272"
       };
       firebase.initializeApp(config);
     </script>
@@ -62,9 +62,9 @@
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link" href="{{ url_for('home') }}">Home</a>
-                    <a class="mdl-navigation__link" href="{{ url_for('about') }}">About</a>
-                    <a class="mdl-navigation__link" href="{{ url_for('happening') }}">Submit Happening</a>
+                    <a class="mdl-navigation__link" href="{{ url_for('home') }}">Home Page</a>
+                    <a class="mdl-navigation__link" href="{{ url_for('about') }}">About Us</a>
+                    <a class="mdl-navigation__link" href="{{ url_for('happening') }}">Submit Event</a>
                     <div id="firebaseui-auth-container"></div>
                     <button id="sign-out" hidden=true class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Sign
                         Out</button>
@@ -73,9 +73,9 @@
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="{{ url_for('home') }}">home</a>
-                <a class="mdl-navigation__link" href="{{ url_for('about') }}">About</a>
-                <a class="mdl-navigation__link" href="{{ url_for('happening') }}">Submit Happening</a>
+                <a class="mdl-navigation__link is-active" href="{{ url_for('home') }}">Home Page</a>
+                <a class="mdl-navigation__link" href="{{ url_for('about') }}">About Us</a>
+                <a class="mdl-navigation__link" href="{{ url_for('happening') }}">Submit Event</a>
                 <div id="firebaseui-auth-container-small"></div>
                 <button id="sign-out-small" hidden=true class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Sign
                     Out</button>
@@ -86,7 +86,7 @@
             {% endblock %}
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">Hip Local - where Hipsters go Local, and Locals go Hip</div>
+                    <div class="mdl-logo">Tik Talk - Your source for news, events, and announcements!</div>
                 </div>
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">

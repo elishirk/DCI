@@ -18,8 +18,8 @@ app = Flask(__name__)
 
 try:
   app.config.from_object(os.environ['APP_SETTINGS'])
-  URL = app.config['API']
-  #URL = 'http://localhost:8085'
+  #URL = app.config['API']
+  #URL = 'https://5000-dot-8505548-dot-devshell.appspot.com/events'
   BUCKET = app.config['BUCKET']
   PROJECT_NAME = app.config['PROJECT']
 except:
@@ -27,7 +27,9 @@ except:
   #  - if no env variable is set, these defaults are set 
   # Port is 5000 because only reason for running from command line locally
   # is because backend is being debugged in vscode, in which case it is on port 5000
-  URL = 'http://localhost:5000'
+
+
+  URL = 'https://tiktalkv2.appspot.com'
   PROJECT_NAME = 'tiktalkv2'
   BUCKET = 'tiktalkbucket3'
 
@@ -40,7 +42,7 @@ def home():
   except Exception: 
     # backend is down, so provide alternative data
     model = {}
-  model['greeting'] = os.getenv('GREETING', 'Welcome to Hip Local')
+  model['greeting'] = os.getenv('GREETING', 'Welcome to Tik Talk - Your source of events, news and announcements')
   return render_template("home.html", model=model, bucket=BUCKET)
 
 @app.route("/about")

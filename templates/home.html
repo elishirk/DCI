@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block title %}
-Hip Local
+Tik Talk
 {% endblock %}
 {% block content %}
 
@@ -20,7 +20,7 @@ Hip Local
     projectId: "tiktalkv2",
     storageBucket: "tiktalkv2.appspot.com",
     messagingSenderId: "219285227272",
-    appId: "1:219285227272:web:04d97e913ffae7d8"
+    appId: "1:219285227272:.png.png..eb:04d97e913ffae7d8"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -36,18 +36,12 @@ Hip Local
 <div class="mdl-grid portfolio-max-width">
 {% for happening in model.happenings %}
     <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-        <div class="mdl-card__media">
-            {% if happening['image'].strip() != "" %}
-                <img class="article-image" src="https://storage.googleapis.com/{{bucket}}/{{happening['image']}}.jpg" border="0" alt="">
-            {% else %}
-            <img class="article-image" src="https://storage.googleapis.com/{{bucket}}/NoImage.jpg" border="0" alt="">
-            {% endif %}
-           </div>
+        
         <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">{{happening['name']}}</h2>
+            <h2 class="mdl-card__title-text">{{happening['location']}}</h2>
         </div>
         <div class="mdl-card__supporting-text">
-            {{happening['description']}}
+            {{happening['time']}}
         </div>
         
         <div class="mdl-card__actions mdl-card--border">
@@ -66,7 +60,7 @@ Hip Local
     </div>
 
     <div class="mdl-grid portfolio-copy">
-        It looks like the events service isn't running just now.
+        It looks like the backend service isn't connected right now.
     </div>
 </div>
 

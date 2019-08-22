@@ -43,15 +43,15 @@ spec:
 apiVersion: v1
 kind: Service
 metadata: 
-  name: hip-local-ui-svc
+  name: tiktalk-loadbalancer
 spec: 
   ports: 
      -  port: 80
         protocol: TCP
         targetPort: 8080
   selector: 
-    app: hip-local-ui
-  type: NodePort
+    app: tiktalk
+  type: loadbalancer
 ---
 
 apiVersion: extensions/v1beta1
